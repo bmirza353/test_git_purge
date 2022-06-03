@@ -17,5 +17,4 @@ class DeleteFileGcs(beam.DoFn):
             searched_blobs = storage_client.list_blobs(bucket_name, prefix=path)
             for found_blob in searched_blobs:
                 # found_blob.delete()
-                logging.info("Testing log")
-                logging.info("Found and Deleted path - {}".format(found_blob.name))
+                logging.info("Found - {}".format(path_name))
