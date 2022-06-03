@@ -13,7 +13,7 @@ class DeleteFileGcs(beam.DoFn):
 
         for blob in blobs:
             path_name = blob.name
-            path = "/".join(path_name.split('/')[1:])
+            # path = "/".join(path_name.split('/')[1:])
             searched_blobs = storage_client.list_blobs(bucket_name, prefix=path)
             for found_blob in searched_blobs:
                 # found_blob.delete()
